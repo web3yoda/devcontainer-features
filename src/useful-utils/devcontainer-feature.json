@@ -1,0 +1,27 @@
+{
+    "name": "useful-utils",
+    "id": "useful-utils",
+    "version": "1.0.0",
+    "description": "A collection of useful-utils",
+    "options": {
+        "gum_version": {
+            "type": "string",
+            "enum": [
+                "latest",
+            ],
+            "default": "latest",
+            "description": "Choose your favorite color."
+        },
+        "_version": {
+            "type": "string",
+            "enum": [
+                "latest",
+            ],
+            "default": "latest",
+            "description": "Choose your favorite color."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
