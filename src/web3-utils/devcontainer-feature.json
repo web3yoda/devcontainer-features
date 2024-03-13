@@ -1,0 +1,35 @@
+{
+    "name": "web3-utils",
+    "id": "web3-utils",
+    "version": "1.0.0",
+    "description": "A collection of web3-utils",
+    "options": {
+        "foundry_version": {
+            "type": "string",
+            "enum": [
+                "nightly-de33b6af53005037b463318d2628b5cfcaf39916"
+            ],
+            "default": "nightly-de33b6af53005037b463318d2628b5cfcaf39916",
+            "description": "foundry version"
+        },
+        "geth_version": {
+            "type": "string",
+            "enum": [
+                "1.13.14-2bd6bd01"
+            ],
+            "default": "1.13.14-2bd6bd01",
+            "description": "geth version"
+        },
+        "prysm_version": {
+            "type": "string",
+            "enum": [
+                "v5.0.1"
+            ],
+            "default": "v5.0.1",
+            "description": "prysm version"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
