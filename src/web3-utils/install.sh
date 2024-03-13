@@ -17,12 +17,12 @@ GETH_REPO=ethereum/go-ethereum
 
 # Install foundry-rs
 echo "Installing foundry-rs ${FOUNDRY_VERSION}"
-curl --progress-bar -SL https://github.com/foundry-rs/foundry/releases/download/${FOUNDRY_VERSION//v/}/foundry_nightly_${OS_TYPE}_${OS_ARCH}.tar.gz \
+curl --progress-bar -SL https://github.com/foundry-rs/foundry/releases/download/$(echo ${FOUNDRY_VERSION} | sed 's/v//')/foundry_nightly_${OS_TYPE}_${OS_ARCH}.tar.gz \
   | tar xzf - -C /usr/local/bin
 
 # Install go-ethereum
 echo "Installing go-ethereum ${GETH_VERSION}"
-curl --progress-bar -sSL https://gethstore.blob.core.windows.net/builds/geth-alltools-${OS_TYPE}-${OS_ARCH}-${GETH_VERSION//v/}.tar.gz \
+curl --progress-bar -sSL https://gethstore.blob.core.windows.net/builds/geth-alltools-${OS_TYPE}-${OS_ARCH}-$(echo ${GETH_VERSION} | sed 's/v//').tar.gz \
   | tar xzf - -C /usr/local/bin --strip-components 1
 
 # Install prysm
