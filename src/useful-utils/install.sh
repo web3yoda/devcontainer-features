@@ -29,8 +29,7 @@ if [ "${GUM_VERSION}" = "latest" ]; then
 fi
 # Install gum
 echo "Installing gum ${GUM_VERSION}"
-GUM_VERSION=$(echo ${GUM_VERSION} | sed 's/v//')
-curl -sSL https://github.com/${GUM_REPO}/releases/download/${GUM_VERSION}/gum_${GUM_VERSION}_amd64.deb -o gum_amd64.deb
+curl -sSL https://github.com/${GUM_REPO}/releases/download/${GUM_VERSION}/gum_$(echo ${GUM_VERSION} | sed 's/v//')_amd64.deb -o gum_amd64.deb
 dpkg -i gum_amd64.deb && rm gum_amd64.deb
 
 if [ "${GOMPLATE_VERSION}" = "latest" ]; then
