@@ -15,7 +15,7 @@ GUM_REPO=charmbracelet/gum
 GOMPLATE_REPO=hairyhenderson/gomplate
 SESSION_MANAGER_PLUGIN_REPO=aws/session-manager-plugin
 
-if [[ "${YQ_VERSION}" == "latest" ]]; then
+if [ "${YQ_VERSION}" = "latest" ]; then
     YQ_VERSION=$(get_latest_release ${YQ_REPO})
 fi
 
@@ -24,7 +24,7 @@ echo "Installing yq ${YQ_VERSION}"
 curl -sSL https://github.com/${YQ_REPO}/releases/download/${YQ_VERSION}/yq_linux_amd64 -o /usr/local/bin/yq
 chmod +x /usr/local/bin/yq
 
-if [[ "${GUM_VERSION}" == "latest" ]]; then
+if [ "${GUM_VERSION}" = "latest" ]; then
     GUM_VERSION=$(get_latest_release ${GUM_REPO})
 fi
 # Install gum
@@ -32,7 +32,7 @@ echo "Installing gum ${GUM_VERSION}"
 curl -sSL https://github.com/${GUM_REPO}/releases/download/${GUM_VERSION}/gum_${GUM_VERSION/v/}_amd64.deb -o gum_amd64.deb
 dpkg -i gum_amd64.deb && rm gum_amd64.deb
 
-if [[ "${GOMPLATE_VERSION}" == "latest" ]]; then
+if [ "${GOMPLATE_VERSION}" = "latest" ]; then
     GOMPLATE_VERSION=$(get_latest_release ${GOMPLATE_REPO})
 fi
 # Install gomplate
@@ -40,7 +40,7 @@ echo "Installing gomplate ${GOMPLATE_VERSION}"
 curl -sSL https://github.com/${GOMPLATE_REPO}/releases/download/${GOMPLATE_VERSION}/gomplate_linux-amd64-slim -o /usr/local/bin/gomplate
 chmod +x /usr/local/bin/gomplate
 
-if [[ "${SESSION_MANAGER_PLUGIN_VERSION}" == "latest" ]]; then
+if [ "${SESSION_MANAGER_PLUGIN_VERSION}" = "latest" ]; then
     SESSION_MANAGER_PLUGIN_VERSION=$(get_latest_release ${SESSION_MANAGER_PLUGIN_REPO})
 fi
 

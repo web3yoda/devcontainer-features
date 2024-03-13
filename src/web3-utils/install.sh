@@ -30,4 +30,5 @@ echo "Installing prysm ${PRYSM_VERSION}"
 for bin in beacon-chain validator prysmctl; do 
 curl --progress-bar -SL https://github.com/prysmaticlabs/prysm/releases/download/${PRYSM_VERSION}/${bin}-${PRYSM_VERSION}-${OS_TYPE}-${OS_ARCH} \
   -o /usr/local/bin/${bin}
+chmod +x /usr/local/bin/${bin}
 done
