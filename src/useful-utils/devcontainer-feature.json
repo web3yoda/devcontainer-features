@@ -4,21 +4,37 @@
     "version": "1.0.0",
     "description": "A collection of useful-utils",
     "options": {
+        "yq_version": {
+            "type": "string",
+            "enum": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "yq version"
+        },
         "gum_version": {
             "type": "string",
             "enum": [
-                "latest",
+                "latest"
             ],
             "default": "latest",
-            "description": "Choose your favorite color."
+            "description": "gum version"
         },
-        "_version": {
+        "gomplate_version": {
             "type": "string",
             "enum": [
-                "latest",
+                "latest"
             ],
             "default": "latest",
-            "description": "Choose your favorite color."
+            "description": "gomplate version"
+        },
+        "session_manager_plugin_version": {
+            "type": "string",
+            "enum": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "session-manager-plugin version"
         }
     },
     "installsAfter": [
