@@ -59,7 +59,7 @@ if [ "${TASK_VERSION}" = "latest" ]; then
     TASK_VERSION=$(get_latest_release ${TASK_REPO})
 fi
 echo "Installing task ${TASK_VERSION}"
-curl -sSL https://github.com/${TASK_REPO}/releases/download/${TASK_VERSION}/task_${OS_TYPE}-${OS_ARCH}.tar.gz \
+curl -sSL https://github.com/${TASK_REPO}/releases/download/${TASK_VERSION}/task_${OS_TYPE}_${OS_ARCH}.tar.gz \
   | tar xzf - -C /usr/local/bin
 
 # Install w3t
@@ -67,7 +67,7 @@ if [ "${W3T_VERSION}" = "latest" ]; then
     W3T_VERSION=$(get_latest_release ${W3T_REPO})
 fi
 echo "Installing w3t ${W3T_VERSION}"
-curl -sSL https://github.com/${W3T_REPO}/releases/download/${W3T_VERSION}/w3t_$(echo ${W3T_VERSION} | sed 's/v//')_${OS_TYPE}-${OS_ARCH}.tar.gz \
+curl -sSL https://github.com/${W3T_REPO}/releases/download/${W3T_VERSION}/w3t_$(echo ${W3T_VERSION} | sed 's/v//')_${OS_TYPE}_${OS_ARCH}.tar.gz \
   | tar xzf - -C /usr/local/bin
 
 # install supervisord
