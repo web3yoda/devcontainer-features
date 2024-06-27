@@ -59,5 +59,5 @@ fi
 
 # install session-manager-plugin
 echo "Installing session-manager-plugin latest"
-curl -sSL "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_${OS_TYPE/amd64/64bit}/session-manager-plugin.deb" -o "session-manager-plugin.deb"
+curl -sSL "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_$(echo ${OS_ARCH} | sed 's/amd64/64bit/')/session-manager-plugin.deb" -o "session-manager-plugin.deb"
 dpkg -i session-manager-plugin.deb && rm session-manager-plugin.deb
