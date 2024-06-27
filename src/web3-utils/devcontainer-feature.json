@@ -1,7 +1,7 @@
 {
     "name": "web3-utils",
     "id": "web3-utils",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "A collection of web3-utils",
     "options": {
         "foundry_version": {
@@ -47,9 +47,9 @@
         "cometbft_version": {
             "type": "string",
             "enum": [
-                "0.38.7"
+                "v0.38.7"
             ],
-            "default": "0.38.7",
+            "default": "v0.38.7",
             "description": "cometbft version"
         }
     },
