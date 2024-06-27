@@ -16,6 +16,7 @@ A collection of useful-utils
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
 | yq_version | yq version | string | latest |
+| dasel_version | dasel version | string | latest |
 | gum_version | gum version | string | latest |
 | gomplate_version | gomplate version | string | latest |
 | task_version | task version | string | latest |
