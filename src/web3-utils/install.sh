@@ -10,7 +10,7 @@ get_latest_release() {
     sed -E 's/.*"([^"]+)".*/\1/'                                    # Pluck JSON value
 }
 
-OS_TYPE=$(uname -s | awk '{print(tolower($0))}')
+OS_TYPE=$(uname -s | sed 's/aarch/arm/' | awk '{print(tolower($0))}')
 OS_ARCH=$(uname -m | sed 's/x86_/amd/' | awk '{print(tolower($0))}')
 
 GETH_REPO=ethereum/go-ethereum
