@@ -20,7 +20,7 @@ A collection of web3-utils
 | prysm_version | prysm version | string | v5.0.4 |
 | gaia_version | gaia version | string | v17.2.0 |
 | ignite_version | ignite version | string | v28.4.0 |
-| cometbft_version | cometbft version | string | 0.38.7 |
+| cometbft_version | cometbft version | string | v0.38.7 |
 
 
 
