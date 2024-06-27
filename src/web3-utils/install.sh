@@ -15,6 +15,7 @@ OS_ARCH=$(uname -m | sed 's/x86_/amd/' | awk '{print(tolower($0))}')
 
 GETH_REPO=ethereum/go-ethereum
 
+## Install Ethereum Tools
 # Install foundry-rs
 echo "Installing foundry-rs ${FOUNDRY_VERSION}"
 curl --progress-bar -SL https://github.com/foundry-rs/foundry/releases/download/$(echo ${FOUNDRY_VERSION} | sed 's/v//')/foundry_nightly_${OS_TYPE}_${OS_ARCH}.tar.gz \
@@ -32,3 +33,14 @@ curl --progress-bar -SL https://github.com/prysmaticlabs/prysm/releases/download
   -o /usr/local/bin/${bin}
 chmod +x /usr/local/bin/${bin}
 done
+
+## Install Cosmos Tools
+# Install gaia
+echo "Installing gaiad ${GAIA_VERSION}"
+curl --progress-bar -SL https://github.com/ignite/cli/releases/download/${GAIA_VERSION}/gaiad-${GAIA_VERSION}-${OS_TYPE}-${OS_ARCH} \
+  -o /usr/local/bin/gaiad && chmod +x /usr/local/bin/gaiad
+
+# Install ignite
+echo "Installing ignite ${IGNITE_VERSION}"
+curl --progress-bar -SL https://github.com/ignite/cli/releases/download/${IGNITE_VERSION}/ignite_${IGNITE_VERSION}_${OS_TYPE}_${OS_ARCH} \
+  -o /usr/local/bin/ignite && chmod +x /usr/local/bin/ignite

@@ -14,6 +14,7 @@ get_latest_release() {
 }
 
 YQ_REPO=mikefarah/yq
+DASEL_REPO=TomWright/dasel
 GUM_REPO=charmbracelet/gum
 GOMPLATE_REPO=hairyhenderson/gomplate
 SESSION_MANAGER_PLUGIN_REPO=aws/session-manager-plugin
@@ -26,6 +27,15 @@ fi
 echo "Installing yq ${YQ_VERSION}"
 curl -sSL https://github.com/${YQ_REPO}/releases/download/${YQ_VERSION}/yq_${OS_TYPE}_${OS_ARCH} -o /usr/local/bin/yq
 chmod +x /usr/local/bin/yq
+
+if [ "${DASEL_VERSION}" = "latest" ]; then
+    DASEL_VERSION=$(get_latest_release ${DASEL_REPO})
+fi
+
+# Install dasel
+echo "Installing dasel ${DASEL_VERSION}"
+curl -sSL https://github.com/${DASEL_REPO}/releases/download/${DASEL_VERSION}/dasel_${OS_TYPE}_${OS_ARCH} -o /usr/local/bin/dasel
+chmod +x /usr/local/bin/dasel
 
 if [ "${GUM_VERSION}" = "latest" ]; then
     GUM_VERSION=$(get_latest_release ${GUM_REPO})
