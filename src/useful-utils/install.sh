@@ -51,7 +51,7 @@ if [ "${GOMPLATE_VERSION}" = "latest" ]; then
     GOMPLATE_VERSION=$(get_latest_release ${GOMPLATE_REPO})
 fi
 echo "Installing gomplate ${GOMPLATE_VERSION}"
-curl -sSL https://github.com/${GOMPLATE_REPO}/releases/download/${GOMPLATE_VERSION}/gomplate_${OS_TYPE}-${OS_ARCH}-slim -o /usr/local/bin/gomplate
+curl -sSL https://github.com/${GOMPLATE_REPO}/releases/download/${GOMPLATE_VERSION}/gomplate_${OS_TYPE}-${OS_ARCH} -o /usr/local/bin/gomplate
 chmod +x /usr/local/bin/gomplate
 
 # Install go-task

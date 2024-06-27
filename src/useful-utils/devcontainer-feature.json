@@ -12,6 +12,14 @@
             "default": "latest",
             "description": "yq version"
         },
+        "dasel_version": {
+            "type": "string",
+            "enum": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "dasel version"
+        },
         "gum_version": {
             "type": "string",
             "enum": [
