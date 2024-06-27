@@ -27,6 +27,30 @@
             ],
             "default": "v5.0.4",
             "description": "prysm version"
+        },
+        "gaia_version": {
+            "type": "string",
+            "enum": [
+                "v17.2.0"
+            ],
+            "default": "v17.2.0",
+            "description": "gaia version"
+        },
+        "ignite_version": {
+            "type": "string",
+            "enum": [
+                "v28.4.0"
+            ],
+            "default": "v28.4.0",
+            "description": "ignite version"
+        },
+        "cometbft_version": {
+            "type": "string",
+            "enum": [
+                "0.38.7"
+            ],
+            "default": "0.38.7",
+            "description": "cometbft version"
         }
     },
     "installsAfter": [

@@ -44,3 +44,8 @@ curl --progress-bar -SL https://github.com/ignite/cli/releases/download/${GAIA_V
 echo "Installing ignite ${IGNITE_VERSION}"
 curl --progress-bar -SL https://github.com/ignite/cli/releases/download/${IGNITE_VERSION}/ignite_${IGNITE_VERSION}_${OS_TYPE}_${OS_ARCH} \
   -o /usr/local/bin/ignite && chmod +x /usr/local/bin/ignite
+
+# Install cometbft
+echo "Installing cometbft ${COMETBFT_VERSION}"
+curl --progress-bar -SL https://github.com/cometbft/cometbft/releases/download/${COMETBFT_VERSION}/cometbft_${COMETBFT_VERSION}_${OS_TYPE}_${OS_ARCH}.tar.gz \
+  | tar xzf - -C /usr/local/bin --strip-components 1
