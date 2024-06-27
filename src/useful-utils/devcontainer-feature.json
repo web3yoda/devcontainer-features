@@ -1,7 +1,7 @@
 {
     "name": "useful-utils",
     "id": "useful-utils",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "description": "A collection of useful-utils",
     "options": {
         "yq_version": {
@@ -27,6 +27,22 @@
             ],
             "default": "latest",
             "description": "gomplate version"
+        },
+        "task_version": {
+            "type": "string",
+            "enum": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "task version"
+        },
+        "w3t_version": {
+            "type": "string",
+            "enum": [
+                "latest"
+            ],
+            "default": "latest",
+            "description": "w3t version"
         },
         "session_manager_plugin_version": {
             "type": "string",
