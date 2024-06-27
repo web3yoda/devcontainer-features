@@ -15,9 +15,12 @@ A collection of web3-utils
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| foundry_version | foundry version | string | nightly-de33b6af53005037b463318d2628b5cfcaf39916 |
-| geth_version | geth version | string | 1.13.14-2bd6bd01 |
-| prysm_version | prysm version | string | v5.0.1 |
+| foundry_version | foundry version | string | nightly-5ac78a9cd4b94dc53d1fe5e0f42372b28b5a7559 |
+| geth_version | geth version | string | v1.14.5-0dd173a7 |
+| prysm_version | prysm version | string | v5.0.4 |
+| gaia_version | gaia version | string | v17.2.0 |
+| ignite_version | ignite version | string | v28.4.0 |
+| cometbft_version | cometbft version | string | 0.38.7 |
 
 
 
