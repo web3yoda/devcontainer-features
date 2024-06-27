@@ -71,9 +71,12 @@ curl -sSL https://github.com/${W3T_REPO}/releases/download/${W3T_VERSION}/w3t_$(
   | tar xzf - -C /usr/local/bin
 
 # install supervisord
-BIN_PATH=/usr/local/bin/supervisord
-curl --progress-bar -SL https://github.com/${SUPERVISORD_REPO}/releases/download/v0.7.3-envfiles/supervisord-v0.7.3-envfiles-${OS_TYPE}-${OS_ARCH} \
-  -o ${BIN_PATH} && chmod +x ${BIN_PATH}
+if [ "${SUPERVISORD_VERSION}" = "latest" ]; then
+    SUPERVISORD_VERSION=$(get_latest_release ${SUPERVISORD_REPO})
+fi
+echo "Installing supervisord ${SUPERVISORD_VERSION}"
+curl --progress-bar -SL https://github.com/${SUPERVISORD_REPO}/releases/download/${SUPERVISORD_VERSION}/supervisord_$(echo ${SUPERVISORD_VERSION} | sed 's/v//')_${OS_TYPE}_${OS_ARCH}.tar.gz \
+  | tar xzf - -C /usr/local/bin
 
 if [ "${SESSION_MANAGER_PLUGIN_VERSION}" = "latest" ]; then
     SESSION_MANAGER_PLUGIN_VERSION=$(get_latest_release ${SESSION_MANAGER_PLUGIN_REPO})
