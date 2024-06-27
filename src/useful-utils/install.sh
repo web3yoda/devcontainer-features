@@ -4,8 +4,8 @@ set -e
 echo "Activating feature 'useful-utils'"
 echo "The provided favorite useful-utils is: ${FAVORITE}"
 
-export OS_TYPE=$(uname -s | sed 's/aarch/arm/' | awk '{print(tolower($0))}')
-export OS_ARCH=$(uname -m | sed 's/x86_/amd/' | awk '{print(tolower($0))}')
+OS_TYPE=$(uname -s | awk '{print(tolower($0))}')
+OS_ARCH=$(uname -m | sed 's/x86_/amd/' | sed 's/aarch/arm/' | awk '{print(tolower($0))}')
 
 get_latest_release() {
   curl --silent "https://api.github.com/repos/$1/releases/latest" | # Get latest release from GitHub api
